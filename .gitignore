@@ -14,3 +14,7 @@ __pycache__/
 # Ignore build directories
 /build/
 /dist/
+
+activations/
+
+heatmap_outputs/
