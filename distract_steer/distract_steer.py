@@ -78,10 +78,10 @@ def build_image_splits(image_dir: Path, test_size: int = 60, seed: int = 12) -> 
     pair_map: dict[str, dict[str, Path]] = {}
     for p in all_images:
         if "clean" in p.stem:
-            key = p.stem.split("_cleannew")[0]
+            key = p.stem.split("_clean")[0]
             pair_map.setdefault(key, {})["clean"] = p
         elif "clutter" in p.stem:
-            key = p.stem.split("_clutternew")[0]
+            key = p.stem.split("_clutter")[0]
             pair_map.setdefault(key, {})["clutter"] = p
 
     pair_map = {k: v for k, v in pair_map.items() if "clean" in v and "clutter" in v}
